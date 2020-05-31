@@ -1,0 +1,22 @@
+/*
+ Theme Name:   Storefront Child 
+ Template:     storefront
+ Version:      1.0.0
+*/
+
+@media only screen and (min-width: 768px) {
+  .col-full {
+    max-width: 100%;
+    margin-left: 41px;
+    margin-right: 41px;
+    padding: 0;
+  }
+}
+
+ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid__product .woocommerce-LoopProduct-link, .wc-block-grid__products li.product .woocommerce-LoopProduct-link, .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link {
+  display: block;
+  min-height: 343.65px;
+  margin-bottom: 16px;
+}
+
+
