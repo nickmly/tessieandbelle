@@ -1,0 +1,51 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-multi-image-buttons  {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tb-multi-image-button-image {
+	width: 100%;
+	height: 100%;
+} 
+
+.tb-multi-image-button {
+	position: relative;
+	margin: 1rem;
+	flex: 1;
+}
+
+.tb-multi-image-button-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition: 0.5s ease-in-out;
+	opacity: 0.5;
+	background-color: $black;
+}
+
+.tb-multi-image-button-caption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3rem;
+	color: $white;
+}
+
+
+.tb-multi-image-button:hover {
+	.tb-multi-image-button-overlay {
+		visibility: visible;
+		opacity: 0.8;
+	}
+}
+

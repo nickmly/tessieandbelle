@@ -3,6 +3,16 @@
  Template:     storefront
  Version:      1.0.0
 */
+@font-face {
+	font-family: 'Poppins';
+	src: url('./assets/fonts/Poppins-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, body, input, button, select, textarea {
+	font-family: 'Poppins', serif;
+}
 
 @media only screen and (min-width: 768px) {
   .col-full {
