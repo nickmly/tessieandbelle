@@ -8,6 +8,7 @@
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .tb-multi-image-button-image {
@@ -19,6 +20,8 @@
 	position: relative;
 	margin: 1rem;
 	flex: 1;
+	max-width: 768px;
+	text-align: center;
 }
 
 .tb-multi-image-button-overlay {
