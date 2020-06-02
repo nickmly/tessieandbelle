@@ -10,6 +10,10 @@
 	font-style: normal;
 }
 
+.woocommerce-active .site-header .site-branding {
+	width: auto;
+}
+
 *, body, input, button, select, textarea {
 	font-family: 'Poppins', serif;
 }
@@ -29,4 +33,7 @@ ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid
   margin-bottom: 16px;
 }
 
+.wpautoterms-footer {
+	z-index: 0 !important;
+}
 
