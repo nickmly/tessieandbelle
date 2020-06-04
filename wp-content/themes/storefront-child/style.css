@@ -37,3 +37,10 @@ ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid
 	z-index: 0 !important;
 }
 
+.storefront-breadcrumb,.storefront-sorting {
+	margin: 0;
+}
+
+.storefront-full-width-content.woocommerce-cart .entry-header, .storefront-full-width-content.woocommerce-checkout .entry-header, .storefront-full-width-content.woocommerce-account .entry-header, .storefront-full-width-content .woocommerce-products-header {
+	padding: 0;
+}
