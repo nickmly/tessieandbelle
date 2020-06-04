@@ -10,12 +10,16 @@
 	font-style: normal;
 }
 
+*, body, input, button, select, textarea {
+	font-family: 'Poppins', serif;
+}
+
 .woocommerce-active .site-header .site-branding {
 	width: auto;
 }
 
-*, body, input, button, select, textarea {
-	font-family: 'Poppins', serif;
+.site-header {
+	background-color: unset;
 }
 
 @media only screen and (min-width: 768px) {
