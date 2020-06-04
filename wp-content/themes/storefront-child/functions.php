@@ -24,12 +24,6 @@ function enqueue_styles()
     array($parenthandle),
     $theme->get('Version') // this only works if you have Version in the style header
   );
-  wp_enqueue_style(
-    'mailchimp',
-    get_stylesheet_directory_uri()  . '/assets/css/mailchimp.css',
-    array($parenthandle),
-    $theme->get('Version') // this only works if you have Version in the style header
-  );
 }
 
 require get_stylesheet_directory() . '/inc/gutenberg.php';
