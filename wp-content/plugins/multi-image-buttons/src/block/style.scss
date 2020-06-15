@@ -7,20 +7,22 @@
 .wp-block-cgb-block-multi-image-buttons  {
 	position: relative;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-around;	
 }
 
 .tb-multi-image-button-image {
 	width: 100%;
 	height: 100%;
+	background-position: center;
+	background-position-y: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
 } 
 
 .tb-multi-image-button {
 	position: relative;
-	margin: 1rem;
-	flex: 1;
-	max-width: 768px;
+	height: 512px;
 	text-align: center;
 }
 
@@ -51,6 +53,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+	.wp-block-cgb-block-multi-image-buttons {
+		flex-direction: row;
+	}
+
+	.tb-multi-image-button { 
+		flex: 1;
+		background-position-y: center;
+	}
+
 	.tb-multi-image-button-caption {
 		font-size: 3rem;
 	}

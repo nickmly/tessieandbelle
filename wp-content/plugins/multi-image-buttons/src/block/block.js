@@ -74,7 +74,10 @@ registerBlockType( 'cgb/block-multi-image-buttons', {
 				<a key={ image.id } className="tb-multi-image-button">
 					<div className="tb-multi-image-button-overlay"></div>
 					<p className="tb-multi-image-button-caption">{ image.caption }</p>
-					<img className="tb-multi-image-button-image" src={ image.url } alt={ image.alt } />
+					<div
+						className="tb-multi-image-button-image"
+						style={ { backgroundImage: `url( ${ image.url } )` } }
+					/>
 				</a>
 			);
 		} ) : null;
@@ -138,7 +141,10 @@ registerBlockType( 'cgb/block-multi-image-buttons', {
 				<a key={ image.id } className="tb-multi-image-button" href={ links[ index ] }>
 					<div className="tb-multi-image-button-overlay"></div>
 					<p className="tb-multi-image-button-caption">{ image.caption }</p>
-					<img className="tb-multi-image-button-image" src={ image.url } alt={ image.alt } />
+					<div
+						className="tb-multi-image-button-image" 
+						style={ { backgroundImage: `url( ${ image.url } )` } }
+					/>
 				</a>
 			);
 		} ) : null;

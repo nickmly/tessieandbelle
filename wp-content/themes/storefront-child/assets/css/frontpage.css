@@ -9,14 +9,17 @@
 
 #landing {
 	width: 100%;
-	min-height: 512px;
+	height: 512px;
+	margin-bottom: 1rem;
 }
 
 #landing-image-container {
 	width: 100%;
 	min-height: inherit;
   position: relative;
-  text-align: center;
+	text-align: center;
+	background-image: url('../images/landing2.jpg');
+	background-size: cover;
 }
 
 #landing-image-overlay {
@@ -26,7 +29,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(51, 51, 51, 0.2);
+  background-color: rgba(51, 51, 51, 0.6);
 }
 
 #landing-image {
@@ -36,21 +39,55 @@
 }
 
 #landing-header {
-	width: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
   position: absolute;
-  color: #fff;
   font-weight: bold;
-  text-shadow: 3px 3px 2px #333;
-  font-size: 48px;
+	font-size: 48px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.landing-header-black {
+	font-family: 'LiuJianMaoCao';
+	font-size: 3rem;
+	color: #fff;
+	background-color: #000;
+}
+
+.landing-header-pink {
+	font-family: 'LiuJianMaoCao';
+	font-size: 2rem;
+	width: 50%;
+	align-self: center;
+	color: #000;
+	background-color: #CD959E;
 }
 
 @media only screen and (min-width: 750px) {
   #landing-header {
-    font-size: 64px;
-  }
+		font-size: 64px;
+		max-width: 1000px;
+	}
+	.landing-header-black {
+		font-size: 4rem;
+	}
+	
+	.landing-header-pink {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.landing-header-black {
+		font-size: 6rem;
+	}
+	
+	.landing-header-pink {
+		font-size: 4rem;
+	}
 }
 
 .front-page-content-area .blocks-gallery-item{
