@@ -41,52 +41,30 @@
 #landing-header {
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	width: 150%;
+	height: 100%;
+	background-image: url('../images/landing_text.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
   position: absolute;
-  font-weight: bold;
+	font-weight: bold;	
 	font-size: 48px;
   top: 50%;
   left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.landing-header-black {
-	font-family: 'LiuJianMaoCao';
-	font-size: 3rem;
-	color: #fff;
-	background-color: #000;
-}
-
-.landing-header-pink {
-	font-family: 'LiuJianMaoCao';
-	font-size: 2rem;
-	width: 50%;
-	align-self: center;
-	color: #000;
-	background-color: #CD959E;
+@media only screen and (min-width: 512px) {
+	#landing-header {
+		width: 80%;
+	}
 }
 
 @media only screen and (min-width: 750px) {
   #landing-header {
 		font-size: 64px;
 		max-width: 1000px;
-	}
-	.landing-header-black {
-		font-size: 4rem;
-	}
-	
-	.landing-header-pink {
-		font-size: 3rem;
-	}
-}
-
-@media only screen and (min-width: 1000px) {
-	.landing-header-black {
-		font-size: 6rem;
-	}
-	
-	.landing-header-pink {
-		font-size: 4rem;
 	}
 }
 

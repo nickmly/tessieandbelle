@@ -15,9 +15,6 @@ get_header(); ?>
 				<div id="landing-image-container">
 					<div id="landing-image-overlay"></div>
 					<div id="landing-header">
-						<h1 class="landing-header-pink">we've got</h1>
-						<h1 class="landing-header-black">cute stuff</h1>
-						<h1 class="landing-header-pink">wanna see?</h1>
 					</div>
 					<div id="landing-image"></div>
 				</div>
