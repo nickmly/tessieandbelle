@@ -57,5 +57,5 @@ ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid
 }
 
 table#size-guide {
-	min-width: unset;
+	min-width: unset !important;
 }
