@@ -60,7 +60,7 @@ table#size-guide {
 	min-width: unset !important;
 }
 
-.woocommerce-product-gallery__image .flex-active-slide {
+.woocommerce-product-gallery__image.flex-active-slide {
 	display: flex !important;
 	justify-content: center !important;
 }
