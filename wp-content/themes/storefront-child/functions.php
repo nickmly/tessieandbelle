@@ -5,7 +5,6 @@ add_action('after_setup_theme', 'after_setup_theme', 99);
 
 function after_setup_theme()
 {
-	remove_action('woocommerce_before_shop_loop', 'storefront_woocommerce_pagination', 30);
 	remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 	remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
 	remove_action('storefront_footer', 'storefront_credit', 20);

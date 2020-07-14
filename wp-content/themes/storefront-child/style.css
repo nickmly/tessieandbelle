@@ -3,6 +3,7 @@
  Template:     storefront
  Version:      1.0.0
 */
+
 @font-face {
 	font-family: 'Poppins';
 	src: url('./assets/fonts/Poppins-Regular.ttf');
@@ -30,25 +31,25 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .col-full {
-    max-width: 100%;
-    margin-left: 41px;
-    margin-right: 41px;
-    padding: 0;
-  }
+	.col-full {
+		max-width: 100%;
+		margin-left: 41px;
+		margin-right: 41px;
+		padding: 0;
+	}
 }
 
 ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid__product .woocommerce-LoopProduct-link, .wc-block-grid__products li.product .woocommerce-LoopProduct-link, .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link {
-  display: block;
-  min-height: 343.65px;
-  margin-bottom: 16px;
+	display: block;
+	min-height: 343.65px;
+	margin-bottom: 16px;
 }
 
 .wpautoterms-footer {
 	z-index: 0 !important;
 }
 
-.storefront-breadcrumb,.storefront-sorting {
+.storefront-breadcrumb, .storefront-sorting {
 	margin: 0;
 }
 
@@ -63,4 +64,8 @@ table#size-guide {
 .woocommerce-product-gallery__image.flex-active-slide {
 	display: flex !important;
 	justify-content: center !important;
+}
+
+#infinite-handle {
+	text-align: center;
 }
