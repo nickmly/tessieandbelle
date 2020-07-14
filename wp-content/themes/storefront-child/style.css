@@ -11,13 +11,6 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'LiuJianMaoCao';
-	src: url('./assets/fonts/LiuJianMaoCao-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
-
 *, body, input, button, select, textarea {
 	font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
