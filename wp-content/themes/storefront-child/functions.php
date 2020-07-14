@@ -48,10 +48,9 @@ function show_credit()
 		$separator = '<span role="separator" aria-hidden="true"></span>';
 		$links_output = get_the_privacy_policy_link('', (!empty($links_output) ? $separator : '')) . $links_output;
 	}
-	//if (apply_filters('storefront_privacy_policy_link', true) && function_exists('the_terms_link')) {
+
 	$separator = '<span role="separator" aria-hidden="true"></span>';
 	$links_output = get_the_terms_link('', (!empty($links_output) ? $separator : '')) . $links_output;
-	//}
 
 	$links_output = apply_filters('storefront_credit_links_output', $links_output);
 ?>
