@@ -19,7 +19,7 @@
 }
 
 *, body, input, button, select, textarea {
-	font-family: 'Poppins', serif;
+	font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 .woocommerce-active .site-header .site-branding {
