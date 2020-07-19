@@ -62,3 +62,7 @@ table#size-guide {
 #infinite-handle {
 	text-align: center;
 }
+
+.woocommerce-store-notice .demo_store {
+	background-color: #707070 !important;
+}

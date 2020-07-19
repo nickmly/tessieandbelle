@@ -14,7 +14,7 @@ function after_setup_theme()
 function get_the_terms_link($before = '', $after = '')
 {
 	$link = '';
-	$terms_url = get_site_url(null, get_theme_mod('mytheme_terms_url'));
+	$terms_url = get_site_url(null, get_theme_mod('terms_url', '/wpautoterms/terms-and-conditions-2/'));
 	$page_title = 'Terms and Conditions';
 
 	if ($terms_url && $page_title) {
@@ -65,6 +65,45 @@ function show_credit()
 <?php
 }
 
+add_action('woocommerce_cart_updated', 'tb_wc_free_shipping_notice');
+/**
+ * Show a message at the cart/checkout displaying
+ * how much to go for free shipping.
+ */
+function tb_wc_free_shipping_notice()
+{
+	// Show only on these pages
+	if (!is_cart() && !is_checkout()) {
+		return;
+	}
+	// Exit if cart is empty
+	if (WC()->cart->get_cart_contents_count() == 0) {
+		return;
+	}
+
+	$cart_total = WC()->cart->get_displayed_subtotal();
+	if (WC()->cart->display_prices_including_tax()) {
+		$cart_total = round($cart_total - (WC()->cart->get_discount_total() + WC()->cart->get_discount_tax()), wc_get_price_decimals());
+	} else {
+		$cart_total = round($cart_total - WC()->cart->get_discount_total(), wc_get_price_decimals());
+	}
+	foreach (WC()->shipping->get_shipping_methods() as $k => $method) {
+		$min_amount = $method->get_option('min_amount');
+
+		if ($method->id == 'free_shipping' && !empty($min_amount) && $cart_total < $min_amount) {
+			$remaining = $min_amount - $cart_total;
+			$message = sprintf('Add %s more to get free shipping!', wc_price($remaining));
+			if (!wc_has_notice($message)) {
+				wc_add_notice($message);
+			}
+		} else if ($method->id == 'free_shipping' && !empty($min_amount) && $cart_total >= $min_amount) {
+			$message = get_theme_mod('free_shipping_msg', 'You unlocked free shipping! Select \'Free shipping\' at checkout');
+			if (!wc_has_notice($message)) {
+				wc_add_notice($message);
+			}
+		}
+	}
+}
 
 function enqueue_styles()
 {

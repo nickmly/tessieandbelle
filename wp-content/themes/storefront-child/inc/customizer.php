@@ -1,16 +1,42 @@
 <?php
-function mytheme_customize_register($wp_customize)
+function tb_customize_register($wp_customize)
 {
-	$wp_customize->add_section('mytheme_terms', array(
+	tb_customize_terms($wp_customize);
+	tb_customize_free_shipping_notice($wp_customize);
+}
+
+function tb_customize_terms($wp_customize)
+{
+	$wp_customize->add_section('tb_terms', array(
 		'title' => 'WPAutoTerms',
 		'description' => '',
 		'priority' => 120,
 	));
-	$wp_customize->add_setting('mytheme_terms_url');
-	$wp_customize->add_control('mytheme_terms_url', array(
+	$wp_customize->add_setting('terms_url', array(
+		'default' => '/wpautoterms/terms-and-conditions-2/'
+	));
+	$wp_customize->add_control('terms_url', array(
 		'label' => __('Terms and Conditions URL'),
 		'type' => 'text',
-		'section' => 'mytheme_terms',
+		'section' => 'tb_terms',
 	));
 }
-add_action('customize_register', 'mytheme_customize_register');
+
+function tb_customize_free_shipping_notice($wp_customize)
+{
+	$wp_customize->add_section('tb_fsn', array(
+		'title' => 'Free Shipping Notice',
+		'description' => '',
+		'priority' => 120,
+	));
+	$wp_customize->add_setting('free_shipping_msg', array(
+		'default' => 'You unlocked free shipping! Select \'Free shipping\' at checkout',
+	));
+	$wp_customize->add_control('free_shipping_msg', array(
+		'label' => __('Free shipping unlocked notice message'),
+		'type' => 'text',
+		'section' => 'tb_fsn',
+	));
+}
+
+add_action('customize_register', 'tb_customize_register');
